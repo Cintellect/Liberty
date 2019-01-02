@@ -15,6 +15,7 @@ import org.hibernate.annotations.ManyToAny;
 @Entity
 @Table(name = "role")
 public class Role {
+	//comment1
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "role_id")
