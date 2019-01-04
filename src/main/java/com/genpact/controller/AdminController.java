@@ -54,7 +54,7 @@ public class AdminController {
 //		userRepository.save(user);
 //		return "user added successfully...";
 //	}
-
+//
 //	@PreAuthorize("hasAnyRole('ADMIN')")
 //	@GetMapping("/admin/all")
 //	public String securedHello() {
