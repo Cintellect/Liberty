@@ -8,8 +8,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.genpact.dao.Admin_dao;
-import com.genpact.model.Book;
-import com.genpact.model.Role;
 import com.genpact.model.User;
 import com.genpact.repository.UserRepository;
 @Service

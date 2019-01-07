@@ -36,27 +36,27 @@ public class Book {
 	private boolean is_approved;
 	
 	@Column(name= "approved_by")
-	private int approved_by;
+	private String approved_by;
 	
 	@Column(name= "approved_date")
 	private java.sql.Timestamp approved_date;
 	
 	
-	public Book() {
-		
-	}
-
-
 	public Book(String book_name, String author_name, String book_category, Timestamp purchase_date,
-					int approved_by, Timestamp approved_date) {
-		//super();
+			boolean is_approved, String approved_by, Timestamp approved_date) {
+		super();
 		this.book_name = book_name;
 		this.author_name = author_name;
 		this.book_category = book_category;
 		this.purchase_date = purchase_date;
-		this.is_approved = false;
+		this.is_approved = is_approved;
 		this.approved_by = approved_by;
 		this.approved_date = approved_date;
+	}
+
+
+	public Book() {
+		
 	}
 
 
@@ -68,7 +68,6 @@ public class Book {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 
 	public String getBook_name() {
@@ -121,12 +120,12 @@ public class Book {
 	}
 
 
-	public int getApproved_by() {
+	public String getApproved_by() {
 		return approved_by;
 	}
 
 
-	public void setApproved_by(int approved_by) {
+	public void setApproved_by(String approved_by) {
 		this.approved_by = approved_by;
 	}
 
@@ -149,6 +148,10 @@ public class Book {
 	}
 
 
+	
+	}
+
+
 
 	
 //	
@@ -163,4 +166,4 @@ public class Book {
 //	}
 
 
-}
+

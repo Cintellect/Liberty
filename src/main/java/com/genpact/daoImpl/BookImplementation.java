@@ -18,11 +18,19 @@ public class BookImplementation implements Book_dao {
 	@Autowired
 	BookRepository repository;
 
+//	@Override
+//	public Book addBook(Book book) {
+//		Book _book = repository.save(new Book(book.getBook_name(),book.getAuthor_name(),book.getBook_category(),book.getPurchase_date(),
+//			book.	book.getApproved_by(),book.getApproved_date()));
+//		return _book;
+//	}
+	
 	@Override
 	public Book addBook(Book book) {
-		Book _book = repository.save(new Book(book.getBook_name(),book.getAuthor_name(),book.getBook_category(),book.getPurchase_date(),
-				book.getApproved_by(),book.getApproved_date()));
-		return _book;
+		
+		book.setIs_approved(true);
+		repository.save(book);
+		return book;
 	}
 
 //	@Override
